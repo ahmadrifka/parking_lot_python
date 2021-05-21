@@ -7,7 +7,8 @@ print('1. create_parking_lot (slot number):  to create parking lot based on slot
 print('2. park KA-001-1234 : to park car into parking lot')
 print('3. leave KA-001-1234 : to remove car from lot')
 print('4. status: to see parking status ')
-print('5. exit: to quit')
+print('5. help: to see all command list')
+print('6. exit: to quit')
 play = True
 while play:
     inputValue = input('Please write command line: ')
@@ -24,6 +25,14 @@ while play:
             parking_lot.status()
         elif splitData[0] == 'exit':
             play = False
+        elif splitData[0] == 'help':
+            print('List of Command: ')
+            print('1. create_parking_lot (slot number):  to create parking lot based on slot number')
+            print('2. park KA-001-1234 : to park car into parking lot')
+            print('3. leave KA-001-1234 : to remove car from lot')
+            print('4. status: to see parking status ')
+            print('5. help: to see all command list')
+            print('6. exit: to quit')
         else:
             print('Invalid Command')
     except:
